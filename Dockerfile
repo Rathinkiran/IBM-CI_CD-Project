@@ -3,6 +3,8 @@ FROM node:18 AS build-stage
 # Use a valid stage name
 
 WORKDIR /app
+#   To run the docker file   -    docker run -p 8081:80 react-code-editor-app
+
 
 # Copy package.json and package-lock.json first to leverage caching
 COPY package.json package-lock.json ./
