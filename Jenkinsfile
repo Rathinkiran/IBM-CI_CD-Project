@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -13,7 +12,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git credentialsId: 'github-credentials', url: 'https://github.com/Rathinkiran/IBM-CI_CD-Project.git', branch: 'main'
             }
         }
 
